@@ -88,9 +88,7 @@
 				
 					<a class="github" target="_blank" href="https://github.com/zhangshiha0" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:1534806866@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -131,9 +129,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/zhangshiha0" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:1534806866@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -407,7 +403,46 @@
 
   
 
+<!--valine评论-->
 
+
+<section id="comments" class="comments">
+  <style>
+    .comments {
+      margin: 30px;
+      padding: 10px;
+      background: #fff
+    }
+
+    @media screen and (max-width:800px) {
+      .comments {
+        margin: auto;
+        padding: 10px;
+        background: #fff
+      }
+    }
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "5ivem82iLyJ8uYX0eBhVbBqT-gzGzoHsz",
+        app_key: "yYRA1IeKfKI71kMuOWP3PCRK",
+        placeholder: "Just go go",
+        avatar:"mm",
+    });
+</script>
+</section>
+
+
+<!--valine评论-->
           </div>
         </div>
       </div>
