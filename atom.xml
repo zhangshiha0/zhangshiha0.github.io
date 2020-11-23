@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-22T04:13:23.775Z</updated>
+  <updated>2020-11-23T14:08:10.403Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第二个blog网站</title>
+    <link href="http://example.com/2020/11/%E7%AC%AC%E4%BA%8C%E4%B8%AAblog%E7%BD%91%E7%AB%99/"/>
+    <id>http://example.com/2020/11/%E7%AC%AC%E4%BA%8C%E4%B8%AAblog%E7%BD%91%E7%AB%99/</id>
+    <published>2020-11-23T13:52:00.000Z</published>
+    <updated>2020-11-23T14:08:10.403Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>上一个网站已经在毕设后停了，这是个长久的。<br>放一张学校的银杏树。</p><a id="more"></a><p><img src="http://phototj.photo.store.qq.com/psc?/V13BNMP04ZsFFl/ruAMsa53pVQWN7FLK88i5q99jXBCxRWE2*QV4F39tXGQIsLIdcJaELoz6dwvBg6HjCwTc6r8jyWBFXXjqlgZD.p.L4t8p0O7QTDcfpn7uLc!/b&bo=HAtABhwLQAYRECc!&rf=mood_app"></p>]]></content>
+    
+    
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;上一个网站已经在毕设后停了，这是个长久的。&lt;br&gt;放一张学校的银杏树。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日常" scheme="http://example.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+    <category term="日常" scheme="http://example.com/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
