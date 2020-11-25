@@ -6,7 +6,7 @@
   <link href="https://zhangshiha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://zhangshiha0.github.io/"/>
-  <updated>2020-11-25T13:48:08.361Z</updated>
+  <updated>2020-11-25T14:13:31.166Z</updated>
   <id>https://zhangshiha0.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>数据结构之回数判断</title>
-    <link href="https://zhangshiha0.github.io/2020/11/Data%20structures%20in%20c/"/>
-    <id>https://zhangshiha0.github.io/2020/11/Data%20structures%20in%20c/</id>
+    <link href="https://zhangshiha0.github.io/2020/11/Datastructuresinc/"/>
+    <id>https://zhangshiha0.github.io/2020/11/Datastructuresinc/</id>
     <published>2020-11-25T13:34:00.000Z</published>
-    <updated>2020-11-25T13:48:08.361Z</updated>
+    <updated>2020-11-25T14:13:31.166Z</updated>
     
     <content type="html"><![CDATA[<hr><p>int型的数据可以压入栈内，但字符型就压不进了，调了半天一头雾水(╯‵□′)╯︵┻━┻。</p><a id="more"></a><p><img src="https://onedrive.gimhoy.com/sharepoint/aHR0cHM6Ly91dGxlci1teS5zaGFyZXBvaW50LmNvbS86aTovZy9wZXJzb25hbC9zaGloYW9fZW1haWxfdF9lZHVfdm4vRVl0TUZjVHZqNDlBcERmQ0U0U184d1FCREx0WFB1VkJNVVBpaHBpaFoyQ1B0QT9lPVdUenN0UA==.mp3"></p><p><img src="https://onedrive.gimhoy.com/sharepoint/aHR0cHM6Ly91dGxlci1teS5zaGFyZXBvaW50LmNvbS86aTovZy9wZXJzb25hbC9zaGloYW9fZW1haWxfdF9lZHVfdm4vRVpBNXg5c0htOFJFbEJiQTgtbmVmT01Cb1NNR0NJM016Vm5vaG1QSHE5dWNVUT9lPUR6SE40OQ==.mp3"></p><p><img src="https://onedrive.gimhoy.com/sharepoint/aHR0cHM6Ly91dGxlci1teS5zaGFyZXBvaW50LmNvbS86aTovZy9wZXJzb25hbC9zaGloYW9fZW1haWxfdF9lZHVfdm4vRVJWejJxWGJnZEZLbnI4dE95bnhIWmNCMDhWYWRLUmtUZEdGeE5lRzFMaURLZz9lPTNUUUpXcA==.mp3"></p>]]></content>
     
