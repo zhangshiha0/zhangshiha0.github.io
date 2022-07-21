@@ -815,7 +815,7 @@ button {
     --color-link: rgba(191,191,191,0.871);
   }
   :root:not([color-scheme]) img {
-    filter: brightness(70%) !important;
+    filter: brightness(85%) !important;
   }
   :root:not([color-scheme]) .blur {
     background: rgba(31,31,31,0.9) !important;
@@ -886,7 +886,7 @@ button {
   --color-link: rgba(191,191,191,0.871);
 }
 [color-scheme='dark'] img {
-  filter: brightness(70%) !important;
+  filter: brightness(85%) !important;
 }
 [color-scheme='dark'] .blur {
   background: rgba(31,31,31,0.9) !important;
@@ -1392,7 +1392,7 @@ ul.list-v >li {
   word-break: keep-all;
 }
 ul.list-v >li.header {
-  font-size: 0.78125rem;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 2em;
   color: var(--color-meta);

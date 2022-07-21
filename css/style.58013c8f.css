@@ -989,7 +989,7 @@ footer.footer .copyright {
   margin-top: 16px;
 }
 footer.footer .copyright p {
-  font-size: 0.78125rem;
+  font-size: 1rem;
 }
 @media screen and (max-width: 768px) {
   footer.footer {
@@ -1143,7 +1143,7 @@ footer.footer .copyright p {
   font-weight: bold;
 }
 .article.l_friends .friends-group .friend-content .friend-card .friend-right p.tags {
-  font-size: 0.78125rem;
+  font-size: 1rem;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline;
@@ -3025,7 +3025,7 @@ img.lazyload:not(.placeholder).loaded {
   -ms-flex-direction: column;
   flex-direction: column;
   align-items: center;
-  font-size: 0.78125rem;
+  font-size: 1rem;
   font-weight: bold;
   color: rgba(68,68,68,0.7);
   line-height: 1.5;
@@ -7103,7 +7103,7 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   :root:not([color-scheme]) svg.iconfont,
   :root:not([color-scheme]) img,
   :root:not([color-scheme]) .lazyload {
-    filter: brightness(70%) !important;
+    filter: brightness(85%) !important;
   }
   :root:not([color-scheme]) .widget.blogger .content .social-wrapper a.social:hover {
     background: var(--color-card);
@@ -7191,7 +7191,7 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 [color-scheme='dark'] svg.iconfont,
 [color-scheme='dark'] img,
 [color-scheme='dark'] .lazyload {
-  filter: brightness(70%) !important;
+  filter: brightness(85%) !important;
 }
 [color-scheme='dark'] .widget.blogger .content .social-wrapper a.social:hover {
   background: var(--color-card);
