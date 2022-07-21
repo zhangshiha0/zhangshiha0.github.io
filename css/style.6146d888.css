@@ -491,6 +491,7 @@ article#tag .all-tags ul li span:before {
 .article center,
 .article center p {
   text-align: center;
+  text-indent: 2em;
 }
 .article .aplayer {
   margin: 1em 0;
@@ -7260,4 +7261,39 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 }
 [color-scheme='dark'] .btn-copy:hover {
   background: var(--color-site-body);
+}
+article#post h2 {
+  font-weight: 900;
+  line-height: inherit;
+  background: linear-gradient(to bottom, transparent 60%, rgba(189,202,219,0.3) 0) no-repeat;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: initial;
+  width: auto;
+  border-bottom: none;
+}
+article#post h3 {
+  font-weight: 900;
+}
+kbd {
+  background-color: #f2f2f2;
+  color: var(--color-p);
+  padding: 3px 5px;
+  border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  box-shadow: inset 0 -2px 0 #d3d3d4, 0 1px 1px rgba(0,0,0,0.05);
+  -webkit-box-shadow: inset 0 -2px 0 #d3d3d4, 0 1px 1px rgba(0,0,0,0.05);
+  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+h1.title {
+  text-align: center;
+  font-size: 2em !important;
+  font-weight: 600;
+}
+h1.title.common_read_h1 {
+  text-align: center !important;
+  font-size: 2.5rem !important;
+}
+.article div#post-body p {
+  text-indent: 2em;
 }

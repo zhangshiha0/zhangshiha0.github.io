@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.shihaoa.top/hello-world/</loc>
+    
+    <lastmod>2022-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/data-in-c/</loc>
+    
+    <lastmod>2022-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/2021/</loc>
+    
+    <lastmod>2022-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.shihaoa.top/once/</loc>
     
     <lastmod>2022-07-21</lastmod>
@@ -12,15 +39,6 @@
   
   <url>
     <loc>https://blog.shihaoa.top/gta/</loc>
-    
-    <lastmod>2022-07-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/2021/</loc>
     
     <lastmod>2022-07-21</lastmod>
     
@@ -47,15 +65,6 @@
   </url>
   
   <url>
-    <loc>https://blog.shihaoa.top/data-in-c/</loc>
-    
-    <lastmod>2021-08-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.shihaoa.top/Second-blog-website/</loc>
     
     <lastmod>2021-08-22</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://blog.shihaoa.top/test/</loc>
-    
-    <lastmod>2020-11-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/hello-world/</loc>
     
     <lastmod>2020-11-22</lastmod>
     

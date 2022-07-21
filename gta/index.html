@@ -1,5 +1,247 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+  <script>
+    function music_on() {
+        var audio1 = document.getElementById('bg_music');
+        if (audio1.paused) {
+            audio1.play();
+        }else{
+            audio1.pause();
+            audio1.currentTime = 0;//音乐从头播放
+        }
+    }
+    function BackTOP() {
+        $("#btn").hide();
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 50) {
+                    $("#btn").fadeIn(200);
+                } else {
+                    $("#btn").fadeOut(200);
+                }
+            });
+            $("#btn").click(function () {
+                $('body,html').animate({
+                        scrollTop: 0
+                    },
+                    500);
+                return false;
+            });
+        });
+        $(function () {
+            $("#say").click(function () {
+                $('body,html').animate({
+                        scrollTop: $('html, body').get(0).scrollHeight
+                    },
+                    500);
+                return false;
+            });
+        })
+    }
+ 
+    $('#readmode').click(function () {
+            $('body').toggleClass('read-mode')
+        })
+        
+    function SiderMenu() {
+        $('#main-container').toggleClass('open');
+        $('.iconflat').css('width', '50px').css('height', '50px');
+        $('.openNav').css('height', '50px');
+        $('#main-container,#mo-nav,.openNav').toggleClass('open')
+    }
+ 
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($("body")), setTimeout(
+            function () {
+                var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") ||
+                    '0';
+                (volantis.dark.mode == "dark") 
+                ? 
+                ($("html").addClass("DarkMode"), 
+                document.cookie = "DarkMode=1;path=/", 
+                $('#modeicon').attr("xlink:href", "#icon-sun")) 
+                : 
+                ($("html").removeClass("DarkMode"), 
+                document.cookie = "DarkMode=0;path=/", 
+                $('#modeicon').attr("xlink:href", "#icon-_moon")), 
+                setTimeout(function () {
+                    $(".Cuteen_DarkSky").fadeOut(1e3, function () {
+                        $(this).remove()
+                    })
+                }, 2e3)
+            }), 50
+    }
+ 
+    function checkNightMode() {
+        if ($("html").hasClass("n-f")) {
+            $("html").removeClass("day");
+            $("html").addClass("DarkMode");
+            $('#modeicon').attr("xlink:href", "#icon-sun")
+            return;
+        }
+        if ($("html").hasClass("d-f")) {
+            $("html").removeClass("DarkMode");
+            $("html").addClass("day");
+            $('#modeicon').attr("xlink:href", "#icon-_moon")
+ 
+            return;
+        }
+        if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
+            if (volantis.dark.mode == "dark") {
+                $("html").addClass("DarkMode");
+                document.cookie = "DarkMode=1;path=/";
+                console.log('夜间模式开启');
+                $('#modeicon').attr("xlink:href", "#icon-sun")
+            } else {
+                $("html").removeClass("DarkMode");
+                document.cookie = "DarkMode=0;path=/";
+                console.log('夜间模式关闭');
+                $('#modeicon').attr("xlink:href", "#icon-_moon")
+            }
+        } else {
+            var DarkMode = document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+            if (DarkMode == '0') {
+                $("html").removeClass("DarkMode");
+                $('#modeicon').attr("xlink:href", "#icon-_moon")
+            } else if (DarkMode == '1') {
+                $("html").addClass("DarkMode");
+                $('#modeicon').attr("xlink:href", "#icon-sun")
+            }
+        }
+    }
+    BackTOP();
+</script>
+ 
+<style>
+    #RightDownBtn {
+        position: fixed;
+        left: 1.875rem;
+        bottom: 1.875rem;
+        padding: 0.3125rem 0.625rem;
+        background: #fff;
+        border-radius: 0.1875rem;
+        transition: 0.3s ease all;
+        z-index: 1;
+        align-items: flex-end;
+        flex-direction: column;
+        display: -moz-flex;
+        display: flex;
+        float: right;
+    }
+ 
+    #RightDownBtn>a,
+    #RightDownBtn>label {
+        width: 1.5em;
+        height: 1.5em;
+        margin: 0.3125rem 0;
+        transition: .2s cubic-bezier(.25, .46, .45, .94);
+    }
+ 
+    /* font color */
+    .DarkMode #page,
+    .DarkMode #colophon,
+    .DarkMode #vcomments .vbtn,
+    .DarkMode .art-content #archives .al_mon_list .al_mon,
+    .DarkMode .art-content #archives .al_mon_list span,
+    .DarkMode body,
+    .DarkMode .art-content #archives .al_mon_list .al_mon,
+    .DarkMode .art-content #archives .al_mon_list span,
+    .DarkMode button,
+    .DarkMode .art .art-content #archives a,
+    .DarkMode textarea,
+    .DarkMode strong,
+    .DarkMode a,
+    .DarkMode p,
+	.DarkMode li,
+    .DarkMode .label {
+        color: rgba(255, 255, 255, .6);
+    }
+ 
+	
+    .DarkMode #page,
+    .DarkMode body,
+    .DarkMode #colophon,
+    .DarkMode #main-container,
+    .DarkMode #page .yya,
+    .DarkMode #content,
+    .DarkMode #contentss,
+    .DarkMode #footer {
+        background-color: #292a2d;
+    }
+    .DarkMode strong,
+    .DarkMode img {
+        filter: brightness(.7);
+    }
+ 
+    /* sun and noon */
+    .Cuteen_DarkSky,
+    .Cuteen_DarkSky:before {
+        content: "";
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 88888888
+    }
+ 
+    .Cuteen_DarkSky {
+        background: linear-gradient(#feb8b0, #fef9db)
+    }
+ 
+    .Cuteen_DarkSky:before {
+        transition: 2s ease all;
+        opacity: 0;
+        background: linear-gradient(#4c3f6d, #6c62bb, #93b1ed)
+    }
+ 
+    .DarkMode .Cuteen_DarkSky:before {
+        opacity: 1
+    }
+ 
+    .Cuteen_DarkPlanet {
+        z-index: 99999999;
+        position: fixed;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        -webkit-animation: CuteenPlanetMove 2s cubic-bezier(.7, 0, 0, 1);
+        animation: CuteenPlanetMove 2s cubic-bezier(.7, 0, 0, 1);
+        transform-origin: center bottom
+    }
+ 
+    @-webkit-keyframes CuteenPlanetMove {
+        0% {
+            transform: rotate(0)
+        }
+ 
+        to {
+            transform: rotate(360deg)
+        }
+    }
+ 
+    @keyframes CuteenPlanetMove {
+        0% {
+            transform: rotate(0)
+        }
+ 
+        to {
+            transform: rotate(360deg)
+        }
+    }
+ 
+    .Cuteen_DarkPlanet:after {
+        position: absolute;
+        left: 35%;
+        top: 40%;
+        width: 9.375rem;
+        height: 9.375rem;
+        border-radius: 50%;
+        content: "";
+        background: linear-gradient(#fefefe, #fffbe8)
+    }
+</style>
     <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.0.0-alpha.112'>
   <meta name="generator" content="Hexo 6.2.0">
   <meta name="Volantis" content="5.0.0-alpha.112">
@@ -26,7 +268,7 @@
   
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://fastly.jsdelivr.net/gh/zhangshiha0/CDN@6.1.2/image/leaves.svg">
-  <link rel="preload" href="/css/style.58013c8f.css" as="style">
+  <link rel="preload" href="/css/style.6146d888.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1832,8 +2074,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.58013c8f.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.58013c8f.css"></noscript>
+  <link rel="stylesheet" href="/css/style.6146d888.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.6146d888.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1911,12 +2153,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/parallax.js?time=1658369932262","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/rightMenu.js?time=1658369932262","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/rightMenus.js?time=1658369932262","sites":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/sites.js?time=1658369932262","friends":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/friends.js?time=1658369932262","contributors":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/contributors.js?time=1658369932262","search":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/search/hexo.js?time=1658369932262"},"css":{"style":"/css/style.58013c8f.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/parallax.js?time=1658404396969","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/rightMenu.js?time=1658404396969","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/rightMenus.js?time=1658404396969","sites":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/sites.js?time=1658404396969","friends":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/friends.js?time=1658404396969","contributors":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/contributors.js?time=1658404396969","search":"https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/search/hexo.js?time=1658404396969"},"css":{"style":"/css/style.6146d888.css"}},
     default: {"avatar":"https://git.poker/zhangshiha0/picx/blob/master/photos/head.283j8yer518g.webp?raw=true","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1658369932262),
+    lastupdate: new Date(1658404396969),
     sidebar: {
-      for_page: ["blogger","category","tagcloud","webinfo"],
-      for_post: ["blogger","category","tagcloud","lastupdate","toc"],
+      for_page: ["blogger","category","tagcloud","lastupdate","webinfo"],
+      for_post: ["blogger","lastupdate","toc"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -2356,9 +2598,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://git.poker/zhangshiha0/picx/blob/master/photos/menulogo.5zoe8euvhv80.webp?raw=true'/>
           
           
+            大白杂货铺
           
         </a>
       
@@ -2439,34 +2681,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
+                  <i class='fa-solid fa-moon fa-fw'></i>开关灯
                 </a>
-                
-              </li>
-            
-          
-          
-            
-            
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
             
           
           
@@ -2560,34 +2778,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box header toggle-mode-btn" onclick="switchNightMode()">
+                  <i class='fa-solid fa-moon fa-fw'></i>开关灯
                 </a>
-                
-              </li>
-            
-          
-            
-              
-            
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
             
           
             
@@ -2717,8 +2911,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">请设置文章作者</p>
+    <img itemprop="image" src="https://git.poker/zhangshiha0/picx/blob/master/photos/head1.3izsqrsfvfc0.jpg?raw=true" class="lazyload" data-srcset="https://git.poker/zhangshiha0/picx/blob/master/photos/head1.3izsqrsfvfc0.jpg?raw=true" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">大白</p>
   </a>
 </div>
 
@@ -2741,6 +2935,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class="new-meta-item browse busuanzi">
+    <a class='notlink'>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+      <p>
+        <span id="busuanzi_value_page_pv">
+          <i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i>
+        </span>
+        次浏览
+      </p>
+    </a>
+  </div>
+
 
           
         
@@ -2777,7 +2983,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://blog.shihaoa.top/gta/>https://blog.shihaoa.top/gta/</a></p>
+                <p>本文永久链接：<a href=https://blog.shihaoa.top/gta/>https://blog.shihaoa.top/gta/</a></p>
+              
+            
+              
+                <p>作者：大白</p>
+
               
             
           </blockquote>
@@ -2894,18 +3105,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
 
-
-  <article class="post white-box shadow floatable blur" id="comments">
-    <span hidden>
-      <meta itemprop="discussionUrl" content="/gta/index.html#comments">
-    </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
-    
-
-    <div id="layoutHelper-comments"></div>
-
-  </article>
-
+  
 
 
 
@@ -2918,7 +3118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow floatable desktop mobile pjax">
+<section class="widget blogger shadow floatable desktop pjax">
   <div class='content'>
     
       
@@ -2988,67 +3188,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     
-  
-
-  <section class="widget category shadow floatable desktop pjax">
-    
-  <header>
-    
-      <a href='categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/C-C/" href="/categories/C-C/"
-            active-action="action-categoriesC-C"
-            ><div class='name'>C/C++</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/test/" href="/categories/test/"
-            active-action="action-categoriestest"
-            ><div class='name'>test</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/test/Vue%E5%AD%A6%E4%B9%A0/" href="/categories/test/Vue%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriestestVueE5ADA6E4B9A0"
-            ><div class='name'>Vue学习</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow floatable desktop mobile pjax">
-    
-  <header>
-    
-      <a href='tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/2021/" style="font-size: 14px; color: #888">2021</a> <a href="/tags/Vuex/" style="font-size: 14px; color: #888">Vuex</a> <a href="/tags/hexo/" style="font-size: 14px; color: #888">hexo</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #888">学习</a> <a href="/tags/%F0%9F%8E%9E%EF%B8%8F%E8%AE%B0%E5%BF%86/" style="font-size: 14px; color: #888">🎞️记忆</a> <a href="/tags/%F0%9F%93%9A%E6%B5%81%E6%B0%B4%E8%B4%A6/" style="font-size: 14px; color: #888">📚流水账</a> <a href="/tags/%F0%9F%93%A2%E7%94%9F%E6%B4%BB/" style="font-size: 14px; color: #888">📢生活</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
 
 
 <section class="widget shadow floatable desktop pjax">
@@ -3061,7 +3200,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/once/"><div class="item"><time>2022-07-21</time></div><span>网吧变迁的10年</span></a></li><li><a class="widget-last" href="/gta/"><div class="item"><time>2022-07-21</time></div><span>GTA5涂装</span></a></li><li><a class="widget-last" href="/2021/"><div class="item"><time>2022-07-21</time></div><span>2021快乐</span></a></li><li><a class="widget-last" href="/data-in-c/"><div class="item"><time>2021-08-26</time><span>C/C++</span></div><span>数据结构</span></a></li><li><a class="widget-last" href="/Second-blog-website/"><div class="item"><time>2021-08-22</time></div><span>第二个blog网站</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/hello-world/"><div class="item"><time>2022-07-21</time></div><span>Hello World</span></a></li><li><a class="widget-last" href="/data-in-c/"><div class="item"><time>2022-07-21</time><span>C/C++</span></div><span>数据结构</span></a></li><li><a class="widget-last" href="/2021/"><div class="item"><time>2022-07-21</time></div><span>2021快乐</span></a></li><li><a class="widget-last" href="/once/"><div class="item"><time>2022-07-21</time></div><span>网吧变迁的10年</span></a></li><li><a class="widget-last" href="/gta/"><div class="item"><time>2022-07-21</time></div><span>GTA5涂装</span></a></li></ul>
   </div>
 </section>
 
@@ -3081,6 +3220,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3151,13 +3298,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" class="lazyload" data-srcset="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a> <a style="margin-inline:5px"target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" class="lazyload" data-srcset="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="本站项目由 GitHub 托管" alt="GitHub"></a> <a style="margin-inline:5px"target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" class="lazyload" data-srcset="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div>
+          <div><p><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" class="lazyload" data-srcset="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a> <a style="margin-inline:5px"target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" class="lazyload" data-srcset="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="本站项目由 GitHub 托管" alt="GitHub"></a> <a style="margin-inline:5px"target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" class="lazyload" data-srcset="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a> <a style="margin-inline:5px"target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?logo=Hexo&label=框架" class="lazyload" data-srcset="https://img.shields.io/badge/Frame-Hexo-blue?logo=Hexo&label=框架" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a> <a style="margin-inline:5px"target="_blank" href="https://github.com/volantis-x/hexo-theme-volantis/"><img src="https://img.shields.io/badge/Volantis-Theme-00BCD4?logo=Vagrant&logoColor=00BCD4" class="lazyload" data-srcset="https://img.shields.io/badge/Volantis-Theme-00BCD4?logo=Vagrant&logoColor=00BCD4" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a> <a style="margin-inline:5px"target="_blank" href="https://icp.gov.moe/?keyword=blog.shihaoa.top"><img src="https://img.shields.io/badge/%E8%90%8CICP%E5%A4%87-20210110%E5%8F%B7-ff69b4" class="lazyload" data-srcset="https://img.shields.io/badge/%E8%90%8CICP%E5%A4%87-20210110%E5%8F%B7-ff69b4" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a> </p></div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright ©大白  2020-2022</a> </p>
+        <p><a href="/">Copyright ©2020-2022 大白</a> </p>
 
         </div>
       
@@ -3400,7 +3547,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/rightMenus.js?time=1658369932262"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/rightMenus.js?time=1658404396969"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3625,19 +3772,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/sites.js?time=1658369932262")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/sites.js?time=1658404396969")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/friends.js?time=1658369932262")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/friends.js?time=1658404396969")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/contributors.js?time=1658369932262")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/plugins/tags/contributors.js?time=1658404396969")
       }
     
   };
@@ -3727,26 +3874,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-      <script>
-  volantis.layoutHelper("comments",`<div id="lv-container" data-id="city" data-uid="MTAyMC81MjA0Ny8yODUyOA==">
-  <noscript><div><i class='fa-solid fa-exclamation-triangle'>&nbsp;无法加载 Livere 评论系统，请确保您的网络能够正常访问。</div></noscript>
-</div>`)
-</script>
-<script data-pjax type="text/javascript">
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
-
-    
 
 
 
+
+  <script defer src="https://cdn.dusays.com/bsz.js" data-pjax></script>
 
 
 <!-- optional -->
@@ -3759,7 +3891,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/search/hexo.js?time=1658369932262");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.0.0-alpha.112/source/js/search/hexo.js?time=1658404396969");
   }
 
   function loadSearchService() {
