@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.shihaoa.top/2021/</loc>
+    
+    <lastmod>2022-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.shihaoa.top/hello-world/</loc>
     
     <lastmod>2022-07-21</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://blog.shihaoa.top/data-in-c/</loc>
-    
-    <lastmod>2022-07-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/2021/</loc>
     
     <lastmod>2022-07-21</lastmod>
     
@@ -106,14 +106,14 @@
   </url>
   
   <url>
-    <loc>https://blog.shihaoa.top/tags/hexo/</loc>
+    <loc>https://blog.shihaoa.top/tags/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.shihaoa.top/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://blog.shihaoa.top/tags/hexo/</loc>
     <lastmod>2022-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
