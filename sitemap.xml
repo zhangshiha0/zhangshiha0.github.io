@@ -2,45 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.shihaoa.top/2021/</loc>
+    <loc>https://blog.shihaoa.top/posts/15175.html</loc>
     
-    <lastmod>2022-07-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/hello-world/</loc>
-    
-    <lastmod>2022-07-21</lastmod>
+    <lastmod>2022-07-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.shihaoa.top/data-in-c/</loc>
+    <loc>https://blog.shihaoa.top/posts/34486.html</loc>
     
-    <lastmod>2022-07-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/once/</loc>
-    
-    <lastmod>2022-07-21</lastmod>
+    <lastmod>2022-07-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.shihaoa.top/gta/</loc>
+    <loc>https://blog.shihaoa.top/posts/56581.html</loc>
     
-    <lastmod>2022-07-21</lastmod>
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/posts/61715.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/posts/14094.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/posts/16107.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/posts/1106.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -59,24 +77,6 @@
     <loc>https://blog.shihaoa.top/categories/index.html</loc>
     
     <lastmod>2022-07-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/Second-blog-website/</loc>
-    
-    <lastmod>2021-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/test/</loc>
-    
-    <lastmod>2020-11-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

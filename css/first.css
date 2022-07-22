@@ -32,6 +32,7 @@
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
 }
 * {
   box-sizing: border-box;
@@ -818,6 +819,7 @@ button {
     --color-list-hl: #63e0c4;
     --color-meta: rgba(191,191,191,0.871);
     --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
     filter: brightness(85%) !important;
@@ -889,6 +891,7 @@ button {
   --color-list-hl: #63e0c4;
   --color-meta: rgba(191,191,191,0.871);
   --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
   filter: brightness(85%) !important;
