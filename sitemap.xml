@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.shihaoa.top/posts/34486.html</loc>
+    <loc>https://blog.shihaoa.top/development/index.html</loc>
     
-    <lastmod>2022-07-23</lastmod>
+    <lastmod>2022-07-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://blog.shihaoa.top/posts/16107.html</loc>
+    
+    <lastmod>2022-07-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/posts/14094.html</loc>
     
     <lastmod>2022-07-23</lastmod>
     
@@ -21,6 +30,15 @@
   
   <url>
     <loc>https://blog.shihaoa.top/posts/61715.html</loc>
+    
+    <lastmod>2022-07-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/posts/34486.html</loc>
     
     <lastmod>2022-07-23</lastmod>
     
@@ -39,15 +57,6 @@
   
   <url>
     <loc>https://blog.shihaoa.top/posts/56581.html</loc>
-    
-    <lastmod>2022-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/posts/14094.html</loc>
     
     <lastmod>2022-07-22</lastmod>
     
@@ -85,57 +94,64 @@
 
   <url>
     <loc>https://blog.shihaoa.top/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://blog.shihaoa.top/tags/hexo/</loc>
-    <lastmod>2022-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.shihaoa.top/tags/%F0%9F%93%9A%E6%B5%81%E6%B0%B4%E8%B4%A6/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.shihaoa.top/tags/2021/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <lastmod>2022-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/tags/hexo/</loc>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.shihaoa.top/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.shihaoa.top/tags/%F0%9F%8E%9E%EF%B8%8F%E8%AE%B0%E5%BF%86/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.shihaoa.top/tags/%F0%9F%93%A2%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.shihaoa.top/tags/Vuex/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <loc>https://blog.shihaoa.top/tags/%E5%85%AC%E7%9B%8A/</loc>
+    <lastmod>2022-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.shihaoa.top/tags/CDN/</loc>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -144,21 +160,14 @@
   
   <url>
     <loc>https://blog.shihaoa.top/categories/C-C/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.shihaoa.top/categories/test/</loc>
-    <lastmod>2022-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.shihaoa.top/categories/test/Vue%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-07-23</lastmod>
+    <loc>https://blog.shihaoa.top/categories/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE/</loc>
+    <lastmod>2022-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
